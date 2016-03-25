@@ -1,0 +1,27 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, minimum-scale=1.0, initial-scale=1.0, user-scalable=yes">
+    <title>fullwidth-element Demo</title>
+    <script src="../../webcomponentsjs/webcomponents-lite.js"></script>
+    <link rel="import" href="../fullwidth-element.html">
+  </head>
+  <body>
+
+    <p>An example of <code>&lt;fullwidth-element&gt;</code>:</p>
+    <textarea id="code" cols="30" rows="5" 
+style="border: none; resize: vertical;"><fullwidth-element>Hello World!</fullwidth-element></textarea>
+    <div id="result" style="margin-top: 10px;"></div>
+
+    <script>
+        var area = document.getElementById('code');
+        var div = document.getElementById('result');
+        div.innerHTML = area.value;
+        area.addEventListener('input', function() {
+            div.innerHTML = area.value;
+        }, false);
+    </script>
+
+  </body>
+</html>

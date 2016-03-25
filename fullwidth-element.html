@@ -1,0 +1,50 @@
+<link rel="import" href="../polymer/polymer.html">
+
+<!--
+A fullwidth text-decorator.
+
+Example:
+
+    <fullwidth-element></fullwidth-element>
+
+@demo
+-->
+
+<dom-module id="fullwidth-element">
+
+    <style>
+      :host {
+        display: inline;
+      }
+    </style>
+
+    <template>
+    </template>
+
+</dom-module>
+
+<script src="lib/index.js"></script>
+<script>
+    Polymer({
+
+        is: 'fullwidth-element',
+
+        properties: {
+            /**
+            * `nowrap` tells the element to not break lines in the middle of the word
+            * (which is a standart unicode behaviour) and instead break them with whitespaces.
+            */
+            nowrap: {
+                type: Boolean,
+                value: false
+            }
+        },
+
+        // Element Lifecycle
+
+        ready: function() {
+            fullwidth.init(this);
+        }
+
+    });
+</script>
