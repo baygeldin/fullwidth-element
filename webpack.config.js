@@ -17,6 +17,10 @@ export default {
         new webpack.NoErrorsPlugin()
     ],
 
+    externals: {
+        'polymer': 'Polymer'
+    },
+
     module: {
         loaders: [{
             test: /\.js$/,

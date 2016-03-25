@@ -1,4 +1,5 @@
 import fullwidth from 'fullwidth';
+import Polymer from 'polymer';
 
 /** @this Node */
 export function ready() {
@@ -27,10 +28,8 @@ export function ready() {
                 .join(' '.repeat(spacing));
             wrapper.appendChild(document.createTextNode(text));
         }
-        let range = document.createRange();
-        range.selectNode(node);
-        range.deleteContents();
-        range.insertNode(wrapper);
-        node = walker.nextNode();
+        let parent = Polymer.dom(node).parentNode;
+        Polymer.dom(parent).insertBefore(wrapper, node);
+        Polymer.dom(parent).removeChild(node);
     }
 }
