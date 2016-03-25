@@ -2,10 +2,14 @@ import fullwidth from 'fullwidth';
 
 /** @this Node */
 export function ready() {
+    let node, textNodes = [];
     let walker = document.createTreeWalker(this,
         NodeFilter.SHOW_TEXT, null, false);
     let { nowrap, spacing } = this;
-    for (let node; (node = walker.nextNode());) {
+    //for (let node; (node = walker.nextNode());) {
+    while ((node = walker.nextNode())) {
+        textNodes.push(node); }
+    for (node of textNodes) {
         let words = node.nodeValue.split(' ');
         let wrapper = document.createElement('span');
         wrapper.style.whiteSpace = 'pre-wrap';
@@ -27,5 +31,6 @@ export function ready() {
         range.selectNode(node);
         range.deleteContents();
         range.insertNode(wrapper);
+        node = walker.nextNode();
     }
 }
