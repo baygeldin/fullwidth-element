@@ -94,7 +94,7 @@
         "max-nested-callbacks": "error",
         "max-params": "off",
         "max-statements": "off",
-        "new-cap": [2, { 
+        "new-cap": [2, {
             "capIsNew": true,
             "capIsNewExceptions": ["Polymer"]
         }],
@@ -118,7 +118,9 @@
         "no-extend-native": "error",
         "no-extra-bind": "error",
         "no-extra-label": "error",
-        "no-extra-parens": "warn",
+        "no-extra-parens": [2, "all", {
+            "conditionalAssign": false
+        }],
         "no-floating-decimal": "error",
         "no-implicit-coercion": "error",
         "no-implicit-globals": "error",

@@ -1,29 +1,23 @@
 <link rel="import" href="../polymer/polymer.html">
 
 <!--
-A fullwidth text-decorator.
+A fullwidth text-decorator with correct word-wrapping.
 
 Example:
 
-    <fullwidth-element></fullwidth-element>
+    <fullwidth-element>Hello World!</fullwidth-element>
 
 @demo
 -->
 
 <dom-module id="fullwidth-element">
 
-    <style>
-      :host {
-        display: inline;
-      }
-    </style>
-
-    <template>
-    </template>
+    <template><content/></template>
 
 </dom-module>
 
 <script src="lib/index.js"></script>
+
 <script>
     Polymer({
 
@@ -37,14 +31,19 @@ Example:
             nowrap: {
                 type: Boolean,
                 value: false
+            },
+            /**
+            * `spacing` determines by how much to multiply the amount of spaces between words.
+            */
+            spacing: {
+                type: Number,
+                value: 1
             }
         },
 
         // Element Lifecycle
 
-        ready: function() {
-            fullwidth.init(this);
-        }
+        ready: methods.ready
 
     });
 </script>

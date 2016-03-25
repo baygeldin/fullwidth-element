@@ -20,7 +20,7 @@ export default {
     module: {
         loaders: [{
             test: /\.js$/,
-            loader: 'expose?fullwidth!babel!eslint',
+            loader: 'expose?methods!babel!eslint',
             exclude: /node_modules/,
         }]
     },
