@@ -1,0 +1,41 @@
+{
+  "name": "fullwidth-element",
+  "authors": [
+    "Alexander Baygeldin <a.baygeldin@gmail.com>"
+  ],
+  "description": "A fullwidth text-decorator.",
+  "keywords": [
+    "web-component",
+    "web-components",
+    "polymer",
+    "fullwidth",
+    "unicode",
+    "japanese"
+  ],
+  "main": "fullwidth-element.html",
+  "license": "MIT",
+  "homepage": "https://github.com/baygeldin/fullwidth-element/",
+  "ignore": [
+    "/.*",
+    "/test/",
+    "/demo/",
+    "/src/"
+  ],
+  "dependencies": {
+    "polymer": "Polymer/polymer#^1.0.0"
+  },
+  "devDependencies": {
+    "iron-component-page": "PolymerElements/iron-component-page#^1.0.0",
+    "web-component-tester": "*"
+  },
+  "_release": "3c4fd877a5",
+  "_resolution": {
+    "type": "branch",
+    "branch": "master",
+    "commit": "3c4fd877a5cb9a52253820f0015d685fd13b3ee5"
+  },
+  "_source": "git://github.com/baygeldin/fullwidth-element.git",
+  "_target": "master",
+  "_originalSource": "baygeldin/fullwidth-element",
+  "_direct": true
+}

@@ -1,0 +1,51 @@
+<link rel="import" href="../polymer/polymer.html">
+
+<!--
+A fullwidth text-decorator with correct word-wrapping.
+
+Example:
+
+    <fullwidth-element>Hello World!</fullwidth-element>
+
+@demo
+-->
+
+<dom-module id="fullwidth-element">
+  <template><content/></template>
+</dom-module>
+
+<script src="lib/index.js"></script>
+
+<script>
+  Polymer({
+
+    is: 'fullwidth-element',
+
+    properties: {
+
+      /**
+      * `nowrap` tells the element to not break lines in the middle of
+      * the word (which is a standart unicode behaviour) and instead
+      * break them with whitespaces.
+      */
+      nowrap: {
+        type: Boolean,
+        value: false
+      },
+
+      /**
+      * `spacing` determines by how much to multiply the amount of
+      * spaces between words.
+      */
+      spacing: {
+        type: Number,
+        value: 1
+      }
+    },
+
+    // Element Lifecycle
+
+    ready: methods.ready
+
+  });
+</script>
