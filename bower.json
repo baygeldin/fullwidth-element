@@ -18,6 +18,7 @@
   "homepage": "https://github.com/baygeldin/fullwidth-element/",
   "ignore": [
     "/.*",
+    "/webpack.config.js",
     "/test/",
     "/demo/",
     "/src/"
