@@ -19,7 +19,8 @@
   "ignore": [
     "/.*",
     "/test/",
-    "/demo/"
+    "/demo/",
+    "/src/"
   ],
   "dependencies": {
     "polymer": "Polymer/polymer#^1.0.0"

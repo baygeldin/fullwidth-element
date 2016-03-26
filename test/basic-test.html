@@ -1,34 +1,24 @@
 <!doctype html>
 <html>
-    <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, minimum-scale=1.0, initial-scale=1.0, user-scalable=yes">
+<head>
 
-        <script src="../../webcomponentsjs/webcomponents-lite.js"></script>
-        <script src="../../web-component-tester/browser.js"></script>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, minimum-scale=1.0, initial-scale=1.0, user-scalable=yes">
 
-        <link rel="import" href="../fullwidth-element.html">
-    </head>
-    <body>
+  <script src="../../webcomponentsjs/webcomponents-lite.js"></script>
+  <script src="../../web-component-tester/browser.js"></script>
 
-        <fullwidth-element>Hello World!</fullwidth-element>
-        <fullwidth-element>Hello <b>World!</b></fullwidth-element>
-        <fullwidth-element nowrap>Hello World!</fullwidth-element>
-        <fullwidth-element spacing="2">Hello World!</fullwidth-element>
-        <fullwidth-element spacing="2">Hello   World!</fullwidth-element>
+  <link rel="import" href="../fullwidth-element.html">
 
+</head>
+<body>
 
-        <script>
-            var elements = document.querySelectorAll('fullwidth-element');
+  <fullwidth-element>Hello World!</fullwidth-element>
+  <fullwidth-element>Hello <b>World!</b></fullwidth-element>
+  <fullwidth-element nowrap>Hello World!</fullwidth-element>
+  <fullwidth-element spacing="2">Hello   World!</fullwidth-element>
 
-            suite('<fullwidth-element>', function() {
-                test('no options', function() {
-                    assert.equal(Polymer.dom(elements[0]).innerHTML,
-                        '<span style="white-space: pre-wrap;">Ｈｅｌｌｏ Ｗｏｒｌｄ！</span>');
-                });
+  <script src="../lib/basic-test.js"></script>
 
-            });
-        </script>
-
-    </body>
+</body>
 </html>

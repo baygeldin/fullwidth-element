@@ -1,7 +1,6 @@
 import fullwidth from 'fullwidth';
 import Polymer from 'polymer';
 
-/** @this Node */
 export function ready() {
     let node, textNodes = [];
     let walker = document.createTreeWalker(this,

@@ -6,11 +6,15 @@ let isProduction = process.env.NODE_ENV === 'production';
 export default {
     context: path.join(__dirname, 'src'),
 
-    entry: './index.js',
+    entry: {
+        "index": './index.js',
+        "demo": './demo.js',
+        "basic-test": './basic-test.js'
+    },
 
     output: {
         path: path.join(__dirname, 'lib'),
-        filename: 'index.js'
+        filename: '[name].js'
     },
 
     plugins: [
